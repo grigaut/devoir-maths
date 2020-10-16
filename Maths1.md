@@ -72,3 +72,78 @@ On aurait pu s'y restreindre dès le debut.
 - et directement :
 $<\gamma'(t),\nabla f(\gamma(t))> \ =B*(\partial_1f(\vec x)\partial_2f(\vec x)-\partial_1f(\vec x)\partial_2f(\vec x))=0$
 Donc  $\gamma'(t) \perp \nabla f(\gamma(t))$
+ 
+## Question 8 ##
+
+Soit deux points du plan $P_1=(p_{1x},p_{1y})$ et $P_2=(p_{2x},p_{2y})$, et deux vecteurs directeurs $u_1=\begin{pmatrix}
+u_{1x}\\
+u_{1y}
+\end{pmatrix}$
+et $u_2=\begin{pmatrix}
+u_{2x}\\
+u_{2y}
+\end{pmatrix}$.
+
+On cherche a lier les points $P_1$ et $P_2$ par un arc parametré $\gamma$ binomial du type : 
+
+pour $t\in \mathbb{R}$,  $\gamma(t)=\begin{pmatrix}
+a+bt+ct^{2}\\
+d+et+ft^{2}
+\end{pmatrix}$ vérifiant :
+ - $\gamma(0)=P_1 \Leftrightarrow \begin{pmatrix}
+a\\
+d
+\end{pmatrix}$ = $\begin{pmatrix}
+p_{1x}\\
+p_{1y}
+\end{pmatrix}$ $\newline$
+ $\gamma(1)=P_2 \Leftrightarrow \begin{pmatrix}
+a+b+c\\
+d+e+f
+\end{pmatrix}$ = $\begin{pmatrix}
+p_{2x}\\
+p_{2y}
+\end{pmatrix}$
+- $\exist(\lambda,\mu) \in (\mathbb{R^{*}_{+}})^{2}$ tel que: $\newline$ 
+  - $\gamma'(0)=\lambda u_1 \Leftrightarrow \begin{pmatrix}
+b\\
+e
+\end{pmatrix}$ = $\begin{pmatrix}
+\lambda u_{1x}\\
+\lambda u_{1y}
+\end{pmatrix}$ 
+  - $\gamma'(0)=\lambda u_1 \Leftrightarrow \begin{pmatrix}
+b+2c\\
+e+2f
+\end{pmatrix}$ = $\begin{pmatrix}
+\mu u_{2x}\\
+\mu u_{2y}
+\end{pmatrix}$ 
+
+On a donc 8 équations pour 8 inconnues (en comptant $\lambda$ et $\mu$ qui ne semblent pas forcement arbitraire)
+On resoût le systeme et on obtient les resultats suivant :
+$\newline$
+$a=p_{1x}$
+$\newline$
+$d=p_{1y}$
+$\newline$
+$b=\lambda u_{1x}$
+$\newline$
+$e=\lambda u_{1y}$
+$\newline$
+$c=p_{2x}-p_{1x}-\lambda u_{1x}$
+$\newline$
+$f=p_{2y}-p_{1y}-\lambda u_{1y}$
+$\newline$
+avec $\lambda = 2\frac{det(\vec {P_1P_2}, \vec u_2)}{det(\vec u_2,\vec u_1)}$
+
+De la on peut en deduire plusieurs contraintes :
+
+Comme $\lambda$ ne peut etre nul si on veut respecter les conditins sur les derivées, on a:
+- $P_1$ et $P_2$ ne peuvent être confondus.
+
+Pour que $\lambda$ soit bien définit
+- $\vec u_1$ et $\vec u_2$ ne peuvent pas être des vecteurs nuls (mais le sujet les definit comme tel)
+- il faut que $\vec u_1$ et $\vec u_2$ ne soient pas parrallels . Cela semble logique ''car on travaille avec une parametrisation polynomiale''
+
+
